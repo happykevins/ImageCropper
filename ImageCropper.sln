@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageCropper", "src\ImageCropper.vcxproj", "{64DE6642-E0ED-4A3C-93D0-8CA7070E302E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{34732D52-0E57-434F-8921-0E5A5F768127}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64DE6642-E0ED-4A3C-93D0-8CA7070E302E} = {64DE6642-E0ED-4A3C-93D0-8CA7070E302E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64DE6642-E0ED-4A3C-93D0-8CA7070E302E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64DE6642-E0ED-4A3C-93D0-8CA7070E302E}.Debug|Win32.Build.0 = Debug|Win32
+		{64DE6642-E0ED-4A3C-93D0-8CA7070E302E}.Release|Win32.ActiveCfg = Release|Win32
+		{64DE6642-E0ED-4A3C-93D0-8CA7070E302E}.Release|Win32.Build.0 = Release|Win32
+		{34732D52-0E57-434F-8921-0E5A5F768127}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34732D52-0E57-434F-8921-0E5A5F768127}.Debug|Win32.Build.0 = Debug|Win32
+		{34732D52-0E57-434F-8921-0E5A5F768127}.Release|Win32.ActiveCfg = Release|Win32
+		{34732D52-0E57-434F-8921-0E5A5F768127}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

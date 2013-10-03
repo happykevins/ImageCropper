@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{a1a0fe5d-577b-4930-9b07-163e38c15257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyxml2">
+      <UniqueIdentifier>{5139eeae-dd28-40b8-977c-c65cf39cb67d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="icropper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>tinyxml2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="icropper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>tinyxml2</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
