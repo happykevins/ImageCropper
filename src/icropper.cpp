@@ -530,7 +530,7 @@ bool Compositor::saveToXML(const char* path /*= NULL*/)
 		textures->InsertEndChild(texture_element);
 
 		texture_element->SetAttribute("id", i);
-		sprintf_s(buf, 256, "ICROPPER_FILE_TEXTURE_FORMAT", (/*fullpath + */m_file_prefix).c_str(), i, getOptions().texture_file_suffix.c_str());
+		sprintf_s(buf, 256, ICROPPER_FILE_TEXTURE_FORMAT, (/*fullpath + */m_file_prefix).c_str(), i, getOptions().texture_file_suffix.c_str());
 		texture_element->SetAttribute("file", buf);
 		sprintf_s(buf, 256, "%d%%", int(getUsageRatioForTexture(i) * 100 + 0.5f));
 		texture_element->SetAttribute("usage", buf);
