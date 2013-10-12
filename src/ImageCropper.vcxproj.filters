@@ -15,6 +15,12 @@
     <ClInclude Include="tinyxml2.h">
       <Filter>tinyxml2</Filter>
     </ClInclude>
+    <ClInclude Include="CPlatform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtils.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="icropper.cpp">
@@ -22,6 +28,9 @@
     </ClCompile>
     <ClCompile Include="tinyxml2.cpp">
       <Filter>tinyxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="CUtils.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

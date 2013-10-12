@@ -45,6 +45,8 @@
 #define ICROPPER_FILE_ANIM_NODE				"anim"
 #define ICROPPER_FILE_FRAME_NODE			"frame"
 
+#define ICROPPER_FILE_TEXTURE_FORMAT		"%s.%d.%s"
+
 namespace icropper {
 
 // reps a left-top position 

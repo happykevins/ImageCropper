@@ -11,10 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CPlatform.h" />
+    <ClInclude Include="CUtils.h" />
     <ClInclude Include="icropper.h" />
     <ClInclude Include="tinyxml2.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CUtils.cpp" />
     <ClCompile Include="icropper.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
   </ItemGroup>

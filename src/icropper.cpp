@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <math.h>
 #include "tinyxml2.h"
+#include "CUtils.h"
 
 namespace icropper {
 
@@ -475,7 +476,8 @@ bool Compositor::saveTextures(const char* path /*= NULL*/)
 	int idx = 0;
 	for (auto texture: m_textures)
 	{
-		sprintf_s(buf, 256, "%s_%d.%s", (fullpath+m_file_prefix).c_str(), idx, ICROPPER_DEFAULT_RAW_TEXTURE_SUFFIX);
+		sprintf_s(buf, 256, ICROPPER_FILE_TEXTURE_FORMAT, (fullpath+m_file_prefix).c_str(), idx, ICROPPER_DEFAULT_RAW_TEXTURE_SUFFIX);
+		CUtils::builddir(buf);
 		BOOL retv = texture->save(buf);
 		if (retv == FALSE)
 			return false;
@@ -528,7 +530,7 @@ bool Compositor::saveToXML(const char* path /*= NULL*/)
 		textures->InsertEndChild(texture_element);
 
 		texture_element->SetAttribute("id", i);
-		sprintf_s(buf, 256, "%s_%d.%s", (fullpath + m_file_prefix).c_str(), i, getOptions().texture_file_suffix.c_str());
+		sprintf_s(buf, 256, "ICROPPER_FILE_TEXTURE_FORMAT", (/*fullpath + */m_file_prefix).c_str(), i, getOptions().texture_file_suffix.c_str());
 		texture_element->SetAttribute("file", buf);
 		sprintf_s(buf, 256, "%d%%", int(getUsageRatioForTexture(i) * 100 + 0.5f));
 		texture_element->SetAttribute("usage", buf);
@@ -580,12 +582,13 @@ bool Compositor::saveToXML(const char* path /*= NULL*/)
 
 	// save to file
 	fullpath += m_file_prefix + "." + getOptions().xml_file_suffix;
-
+	CUtils::builddir(fullpath.c_str());
 	return tx2::XML_SUCCESS == doc.SaveFile(fullpath.c_str());
 }
 
 bool Compositor::saveToBin(const char* path /*= NULL*/)
 {
+	CUtils::builddir(path);
 	return true;
 }
 
